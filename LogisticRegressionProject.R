@@ -194,7 +194,7 @@ set.seed(145)
 
 # Split up the sample, basically randomly assigns a booleans to 
 # a new column "sample"
-sample <- sample.split(df.adult$income, SplitRatio = 0.75)
+sample <- sample.split(df.adult$income, SplitRatio = 0.70)
 
 # Training Data
 train = subset(df.adult, sample == TRUE)
@@ -245,11 +245,14 @@ table(test$income, test$income.prediction > 0.5)
 # from a rank-deficient fit may be misleading
                                                                   
 # 32. What was the accuracy of our model?
+(6392+1414)/(528+881+1414+6392)
 
 # 33. Calculate other measures of performance like, recall or precision.
+#recall
+6392/(6392+528)
 
 # 34. precision
-
+(6441)/(6441+892)
 #Ref: www.pieriandata.com
 
 
